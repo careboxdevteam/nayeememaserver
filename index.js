@@ -68,4 +68,4 @@ client.connect(err => {
 
 
 
-app.listen(process.env.NODE_ENV || port);
+app.listen(process.env.PORT || port);
