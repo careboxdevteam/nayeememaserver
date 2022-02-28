@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 app.use(cors());
 app.use(bodyParser.json());
+const port = 5000;
 
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
@@ -67,4 +68,4 @@ client.connect(err => {
 
 
 
-app.listen(4200);
+app.listen(process.env.NODE_ENV || port);
